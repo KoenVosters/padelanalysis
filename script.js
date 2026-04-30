@@ -185,5 +185,20 @@ class PadelAnalyzer {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    new PadelAnalyzer();
+    // Set active navigation link
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    // Initialize analyzer only if on index.html
+    if (currentPage === 'index.html' || currentPage === '') {
+        new PadelAnalyzer();
+    }
 });

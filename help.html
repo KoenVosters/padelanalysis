@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Padel Score Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Analyzer</a></li>
+                <li><a href="help.html" class="nav-link active">Help</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Padel Score Analyzer - Help</h1>
+        </header>
+
+        <main>
+            <section class="help-section">
+                <h2>How to Use</h2>
+                <p>The Padel Score Analyzer calculates ranking points based on your padel match performance using the Padelscore v3 methodology.</p>
+            </section>
+
+            <section class="help-section">
+                <h2>Input Fields</h2>
+                <div class="help-content">
+                    <h3>Player Name</h3>
+                    <p>Enter the name of the player whose performance you want to analyze.</p>
+
+                    <h3>Tournament Types</h3>
+                    <p>The analyzer supports two types of tournaments:</p>
+                    <ul>
+                        <li><strong>Tournaments:</strong> Regular and Gemengd (Mixed) categories</li>
+                        <li><strong>Interclub:</strong> Regular and Gemengd (Mixed) categories</li>
+                    </ul>
+
+                    <h3>Match Results</h3>
+                    <p>For each tournament type and category, enter:</p>
+                    <ul>
+                        <li><strong>Pool Wins:</strong> Number of matches won during the pool phase</li>
+                        <li><strong>Pool Defeats:</strong> Number of matches lost during the pool phase</li>
+                        <li><strong>Finals Wins:</strong> Number of matches won in the finals</li>
+                        <li><strong>Finals Defeats:</strong> Number of matches lost in the finals</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>Scoring Formula</h2>
+                <div class="help-content">
+                    <p>Points are calculated using the following formulas:</p>
+                    <div class="formula-box">
+                        <p><strong>Win Points (WP):</strong> (Pool Wins × 1 + Finals Wins × 1.5) × Category Multiplier</p>
+                        <p><strong>Defeat Points (VP):</strong> (Pool Defeats × 1 + Finals Defeats × 0.5) × Category Multiplier</p>
+                        <p><strong>Category Multiplier:</strong> Regular = 1.0 | Mixed = 0.4 | Interclub = 0.8 | Interclub Mixed = 0.4</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>Understanding Results</h2>
+                <div class="help-content">
+                    <h3>Results Display</h3>
+                    <p>After clicking "Calculate Points", you'll see a detailed breakdown including:</p>
+                    <ul>
+                        <li><strong>Win Points (WP):</strong> Points earned from victories</li>
+                        <li><strong>Defeat Points (VP):</strong> Points earned from defeats - played matches divided by 12</li>
+                        <li><strong>Total Points:</strong> Combined score for ranking purposes</li>
+                    </ul>
+                    <p>Results are shown for each tournament type and category combination.</p>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>Tips</h2>
+                <div class="help-content">
+                    <ul>
+                        <li>Enter 0 for any category where the player didn't participate</li>
+                        <li>Finals wins are weighted more heavily (1.5x) than pool wins (1x)</li>
+                        <li>Mixed/Gemengd tournaments are weighted at 0.4x the value of regular tournaments</li>
+                        <li>Interclub tournaments are weighted at 0.8x the value of regular tournaments</li>
+                        <li>Interclub Mixed tournaments are weighted at 0.4x the value of regular tournaments</li>
+                        <li>Use the analyzer to track performance progression over multiple tournaments</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Padel Analysis. Vibe coded by Koen Vosters with Visual Studio Code and Github Copilot</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
