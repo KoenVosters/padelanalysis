@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel Score Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Padel Score Analyzer</h1>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Player Performance Input</h2>
+                <form id="scoreForm">
+                    <div class="form-group">
+                        <label for="playerName">Player Name:</label>
+                        <input type="text" id="playerName" name="playerName" placeholder="Enter player name" required>
+                    </div>
+
+                    <div class="tournament-sections">
+                        <!-- Tournaments Regular -->
+                        <fieldset class="tournament-fieldset">
+                            <legend>Tournaments - Regular</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tournaments-regular-poolWins">Pool Wins:</label>
+                                    <input type="number" id="tournaments-regular-poolWins" name="tournaments-regular-poolWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tournaments-regular-poolDefeats">Pool Defeats:</label>
+                                    <input type="number" id="tournaments-regular-poolDefeats" name="tournaments-regular-poolDefeats" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tournaments-regular-finalsWins">Finals Wins:</label>
+                                    <input type="number" id="tournaments-regular-finalsWins" name="tournaments-regular-finalsWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tournaments-regular-finalsDefeats">Finals Defeats:</label>
+                                    <input type="number" id="tournaments-regular-finalsDefeats" name="tournaments-regular-finalsDefeats" min="0" value="0">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Tournaments Mixed -->
+                        <fieldset class="tournament-fieldset">
+                            <legend>Tournaments - Gemengd (Mixed)</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tournaments-mixed-poolWins">Pool Wins:</label>
+                                    <input type="number" id="tournaments-mixed-poolWins" name="tournaments-mixed-poolWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tournaments-mixed-poolDefeats">Pool Defeats:</label>
+                                    <input type="number" id="tournaments-mixed-poolDefeats" name="tournaments-mixed-poolDefeats" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tournaments-mixed-finalsWins">Finals Wins:</label>
+                                    <input type="number" id="tournaments-mixed-finalsWins" name="tournaments-mixed-finalsWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="tournaments-mixed-finalsDefeats">Finals Defeats:</label>
+                                    <input type="number" id="tournaments-mixed-finalsDefeats" name="tournaments-mixed-finalsDefeats" min="0" value="0">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Interclub Regular -->
+                        <fieldset class="tournament-fieldset">
+                            <legend>Interclub - Regular</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="interclub-regular-poolWins">Pool Wins:</label>
+                                    <input type="number" id="interclub-regular-poolWins" name="interclub-regular-poolWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="interclub-regular-poolDefeats">Pool Defeats:</label>
+                                    <input type="number" id="interclub-regular-poolDefeats" name="interclub-regular-poolDefeats" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="interclub-regular-finalsWins">Finals Wins:</label>
+                                    <input type="number" id="interclub-regular-finalsWins" name="interclub-regular-finalsWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="interclub-regular-finalsDefeats">Finals Defeats:</label>
+                                    <input type="number" id="interclub-regular-finalsDefeats" name="interclub-regular-finalsDefeats" min="0" value="0">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Interclub Mixed -->
+                        <fieldset class="tournament-fieldset">
+                            <legend>Interclub - Gemengd (Mixed)</legend>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="interclub-mixed-poolWins">Pool Wins:</label>
+                                    <input type="number" id="interclub-mixed-poolWins" name="interclub-mixed-poolWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="interclub-mixed-poolDefeats">Pool Defeats:</label>
+                                    <input type="number" id="interclub-mixed-poolDefeats" name="interclub-mixed-poolDefeats" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="interclub-mixed-finalsWins">Finals Wins:</label>
+                                    <input type="number" id="interclub-mixed-finalsWins" name="interclub-mixed-finalsWins" min="0" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="interclub-mixed-finalsDefeats">Finals Defeats:</label>
+                                    <input type="number" id="interclub-mixed-finalsDefeats" name="interclub-mixed-finalsDefeats" min="0" value="0">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Calculate Points</button>
+                </form>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display:none;">
+                <h2>Analysis Results</h2>
+                <div id="resultsContainer"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Padel Analysis. Vibe coded by Koen Vosters with Visual Studio Code and Github Copilot</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
