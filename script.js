@@ -16,22 +16,22 @@ class PadelAnalyzer {
             {
                 tournament: 'tournaments',
                 category: 'regular',
-                legend: 'Tournaments - Regular'
+                legend: 'Toernooien - Regulier'
             },
             {
                 tournament: 'tournaments',
                 category: 'mixed',
-                legend: 'Tournaments - Gemengd (Mixed)'
+                legend: 'Toernooien - Gemengd (Gemengd)'
             },
             {
                 tournament: 'interclub',
                 category: 'regular',
-                legend: 'Interclub - Regular'
+                legend: 'Interclub - Regulier'
             },
             {
                 tournament: 'interclub',
                 category: 'mixed',
-                legend: 'Interclub - Gemengd (Mixed)'
+                legend: 'Interclub - Gemengd (Gemengd)'
             }
         ];
 
@@ -127,18 +127,18 @@ class PadelAnalyzer {
                 <h4>${analysis.legend}</h4>
                 <p><strong>Multiplier:</strong> ${analysis.categoryMultiplier}</p>
                 <hr>
-                <h5>Match Performance</h5>
-                <p>Pool Wins: ${analysis.pouleWins}</p>
-                <p>Pool Defeats: ${analysis.pouleDefeats}</p>
-                <p>Finals Wins: ${analysis.finalsWins}</p>
-                <p>Finals Defeats: ${analysis.finalsDefeats}</p>
-                <p>Total Matches: ${analysis.totalMatches}</p>
-                <p>Win Rate: ${analysis.winRate}%</p>
+                <h5>Wedstrijdprestatie</h5>
+                <p>Poule Wins: ${analysis.pouleWins}</p>
+                <p>Poule Verlies: ${analysis.pouleDefeats}</p>
+                <p>Finale Wins: ${analysis.finalsWins}</p>
+                <p>Finale Verlies: ${analysis.finalsDefeats}</p>
+                <p>Totaal Wedstrijden: ${analysis.totalMatches}</p>
+                <p>Winpercentage: ${analysis.winRate}%</p>
                 <hr>
-                <h5>Points Calculation</h5>
-                <p><strong>Winning Points (WP):</strong> ${analysis.wp}</p>
-                <p><strong>Losing Points (VP):</strong> ${analysis.vp}</p>
-                <p><strong>Total Points:</strong> ${analysis.totalPoints}</p>
+                <h5>Puntberekening</h5>
+                <p><strong>Winpunten (WP):</strong> ${analysis.wp}</p>
+                <p><strong>Verlies Punten (VP):</strong> ${analysis.vp}</p>
+                <p><strong>Totaal Punten:</strong> ${analysis.totalPoints}</p>
             </div>
             `;
         }
@@ -168,12 +168,12 @@ class PadelAnalyzer {
         // Add totals summary
         html += `
         <div class="totals-summary">
-            <h4>Overall Summary</h4>
-            <p><strong>Total Winning Points (WP):</strong> ${totalWP}</p>
-            <p><strong>Total Losing Points (VP):</strong> ${totalVP}</p>
-            <p><strong>Total Matches Played:</strong> ${totalMatches}</p>
-            <p><strong>Deducted Points to reduce:</strong> ${removedLostPoints}</p>
-            <p class="grand-total"><strong>Current Percentage:</strong> ${(currentPercentage * 100).toFixed(3)}%</p>    
+            <h4>Totaal Samenvatting</h4>
+            <p><strong>Totaal Winpunten (WP):</strong> ${totalWP}</p>
+            <p><strong>Totaal Verlies Punten (VP):</strong> ${totalVP}</p>
+            <p><strong>Totaal Wedstrijden Gespeeld:</strong> ${totalMatches}</p>
+            <p><strong>Ingetrokken Punten:</strong> ${removedLostPoints}</p>
+            <p class="grand-total"><strong>Huidiig Percentage:</strong> ${(currentPercentage * 100).toFixed(3)}%</p>    
         </div>
         `;
 
